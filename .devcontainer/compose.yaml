@@ -1,6 +1,6 @@
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/java:1-21-bookworm
+    image: mcr.microsoft.com/devcontainers/java:21-bookworm
     volumes:
       - ..:/workspaces/loja-web-sessao-starter:cached
     command: sleep infinity

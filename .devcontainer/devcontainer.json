@@ -3,9 +3,7 @@
   "dockerComposeFile": "compose.yaml",
   "service": "app",
   "workspaceFolder": "/workspaces/loja-web-sessao-starter",
-  "features": {
-    "ghcr.io/devcontainers/features/maven:1": {}
-  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y maven",
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": { "label": "Loja Web" }
