@@ -8,7 +8,11 @@ final class SessaoCarrinho {
     }
 
     static UUID obter(HttpSession sessao) {
-        return sessao == null ? null : (UUID) sessao.getAttribute("carrinho");
+        if (sessao == null) {
+            return null;
+        }
+        Object atributo = sessao.getAttribute("carrinho");
+        return atributo instanceof UUID ? (UUID) atributo : null;
     }
 
     static UUID obterOuCriar(HttpSession sessao) {
