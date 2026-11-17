@@ -1,0 +1,13 @@
+{
+  "name": "Loja Web - Servlets e PostgreSQL",
+  "dockerComposeFile": "compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/loja-web-sessao-starter",
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {}
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": { "label": "Loja Web" }
+  }
+}
