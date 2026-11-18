@@ -35,7 +35,9 @@ public class CarrinhoItemServlet extends HttpServlet {
                 throw new ServletException("Não foi possível adicionar o produto ao carrinho", erro);
             }
         }
-        response.sendRedirect(request.getContextPath() + "/carrinho");
+        // Mantém o protocolo e o host externos quando a aplicação está atrás de um proxy.
+        response.setStatus(HttpServletResponse.SC_SEE_OTHER);
+        response.setHeader("Location", request.getContextPath() + "/carrinho");
     }
 
     @Override
